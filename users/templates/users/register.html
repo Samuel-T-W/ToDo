@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo</title>
+</head>
+<body>
+
+	<div>
+		<form method="POST">{% csrf_token %}
+			<fieldset>
+				{{ form }}
+			</fieldset>
+		    <input type="submit" value="Add">
+		</form>
+	</div>
+	<small>
+		Already have an account? <a href="{% url 'login' %}"> Sign in </a>
+	</small>
+</body>
+</html>
